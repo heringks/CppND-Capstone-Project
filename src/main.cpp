@@ -14,6 +14,7 @@ int main() {
 
   // ADDED TO EXTEND THE GAME
   Game::GetUsersChoice();
+  // NOTE: Modeled after the code in the Concurrent Traffic Simulation project in function Vehicle.cpp
   std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);

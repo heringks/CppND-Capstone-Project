@@ -74,7 +74,9 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
     body.erase(body.begin());
 
     // ADDED TO EXTEND THE GAME
-    // If the snake has not eaten within the maximum time between meals, decrease its size by 1
+    // If the snake has not eaten within the maximum time between meals, decrease its size by 
+    // NOTE: The timing logic was modeled after the code in the Concurrent Traffic Simulation project
+    // in functions TrafficLight.cpp and Vehicle.cpp
     long timeSinceSnakeAte = std::chrono::duration_cast<std::chrono::milliseconds>
       (std::chrono::system_clock::now() - lastTimeSnakeAte).count();
     if (timeSinceSnakeAte > _maxTimeBetweenMeals)

@@ -237,6 +237,8 @@ void Food::RetainPreviousDirection(float &X, float &Y)
     }
 
     // If the previous food location should be retained
+    // NOTE: The timing logic was modeled after the code in the Concurrent Traffic Simulation project
+    // in functions TrafficLight.cpp and Vehicle.cpp
     if (retainPreviousDirection)
     {
         // Amount of time the previous direction of the food should be retained
