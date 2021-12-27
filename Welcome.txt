@@ -1,0 +1,37 @@
+***************************************************************************************************
+Welcome to the Snake game! The objective of this game is to keep the snake alive and growing.
+The snake grows as it eats food. Upon game startup, the snake only has its head, shown by one
+box on the display. The first time the snake eats, its body emerges with just one box. The snake
+gains an additional box on its body after each subsequent meal. When the snake does not eat any 
+food within a maximum amount of time, selected by the user upon game startup, it loses one box of 
+its head + body. When there are no boxes left (i.e., no head or body), the snake dies and the 
+game is over. The snake will also die if one of the body cells is in the same location as the head
+cell (basically, the snake eats itself). This can happen if the direction of the snake is changed
+too rapidly.
+
+The game can be played at one of three levels: basic, intermediate, or advanced. In all three
+levels of the game, food is placed at a random location on the screen, both initially and after 
+each time the snake eats. The behavior of both the snake and the food depend on the difficulty 
+level chosen by the user, as explained below.
+
+Basic:
+  * Snake: each time the snake eats, its speed increases by 0.02
+  * Food: always stationary
+Intermediate:
+  * Snake: each time the snake eats, its speed increases by 0.025
+  * Food: 1) moves in a constant, horizontal direction, always from left to right; 2) the speed
+    of the food is 1/2 the speed of the snake
+Advanced:
+  * Snake: each time the snake eats, its speed increases by 0.03
+  * Food: 1) moves in a direction generally away from the snake; 2) the speed of the food is 3/4
+    the speed of the snake
+
+The score increases each time the snake eats based on this formula:
+score = score + 1 + (difficulty level) * 10 * (speed of the food), in which Basic = 0, 
+  Intermediate = 1, and Advanced = 2
+
+To start the game, enter "./SnakeGame" within the .../CppND-Capstone-Snake-Game/build directory.
+You will then be prompted to enter the difficulty level to which you want to play and the maximum
+amount of time the snake can go between meals. Movement of the snake is controlled via the up, down,
+left, and right arrows on the keyboard.
+***************************************************************************************************
